@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — BgSnip</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="../index.html">✂️ BgSnip</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button onclick="window.location.href='signup.html'">Get Started</button></li>
+      <li><button id="theme-toggle" class="border-button">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section services-hero">
+    <span class="section-tag">✨ AI Powered</span>
+    <h1>Remove Background</h1>
+    <p>Upload your image below and let our AI do the work instantly.</p>
+  </section>
+
+  <!-- TOOL AREA -->
+  <section class="page services-page">
+
+    <div id="tool-alert"></div>
+
+    <!-- UPLOAD -->
+    <div class="upload-area" id="upload-area">
+      <img src="../sources/icon-upload.png" alt="Upload" class="upload-icon" />
+      <h3>Drag & Drop Your Image Here</h3>
+      <p id="upload-hint">or click to browse — JPG, PNG, WebP supported</p>
+      <button type="button" class="border-button">Browse File</button>
+      <input type="file" id="file-input" accept="image/*" class="hidden-input" />
+    </div>
+
+    <!-- PROGRESS -->
+    <div id="progress-wrap" class="progress-wrap">
+      <p class="progress-text">Processing your image...</p>
+      <div class="progress-bar-bg">
+        <div id="progress-bar" class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- PROCESS BUTTON -->
+    <div class="action-buttons">
+      <button id="process-btn" class="lg-button">✨ Remove Background</button>
+      <button id="download-btn" class="border-button lg-button">⬇️ Download PNG</button>
+    </div>
+
+    <!-- RESULT AREA -->
+    <div class="result-area" id="result-area">
+      <div class="result-box">
+        <h4>Original</h4>
+        <img id="original-preview" src="" alt="Original image" class="result-image" />
+      </div>
+      <div class="result-box">
+        <h4>Background Removed</h4>
+        <img id="result-preview" src="" alt="Result image" class="result-image transparent-bg" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- TIPS -->
+  <section class="page tips-page">
+    <div class="section-header">
+      <span class="section-tag">Tips</span>
+      <h2>Get Better Results</h2>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>🖼️ Clear Subject</h3>
+        <p>Images with a clear, well-lit subject produce the cleanest results.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Contrast Helps</h3>
+        <p>High contrast between subject and background improves edge accuracy.</p>
+      </div>
+      <div class="card">
+        <h3>📐 Higher Res</h3>
+        <p>Uploading higher resolution images preserves more detail after processing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>✂️ BgSnip</h1>
+        <br>
+        <p>AI-powered background removal for everyone.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+      </div>
+    </div>
+    <p>© 2025 BgSnip. All rights reserved.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

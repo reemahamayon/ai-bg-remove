@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — BgSnip</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="../index.html">✂️ BgSnip</a>
+    
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button onclick="window.location.href='signup.html'">Get Started</button></li>
+      <li><button id="theme-toggle" class="border-button">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section pricing-hero">
+    <span class="section-tag">Transparent Pricing</span>
+    <h1>Simple & Fair Plans</h1>
+    <p>Start free. Upgrade when you need more power.</p>
+
+    <!-- BILLING TOGGLE -->
+    <div class="billing-toggle">
+      <button class="pricing-tab active border-button sm-button pill">Monthly</button>
+      <button class="pricing-tab border-button sm-button pill">Yearly — Save 20%</button>
+    </div>
+  </section>
+
+  <!-- PRICING CARDS -->
+  <section class="page pricing-page">
+    <div class="card-container pricing-container">
+
+      <!-- FREE -->
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <p>Perfect for trying out BgSnip.</p>
+        <div class="pricing-price">
+          <h1 class="price-value" data-monthly="$0" data-yearly="$0">$0</h1>
+          <span class="price-period">/mo</span>
+        </div>
+        <ul class="pricing-feature-list">
+          <li>✅ 3 images per day</li>
+          <li>✅ Up to 1080p output</li>
+          <li>✅ No watermark</li>
+          <li>✅ PNG download</li>
+          <li>❌ Batch processing</li>
+          <li>❌ API access</li>
+          <li>❌ Priority support</li>
+        </ul>
+        <button class="border-button full-width center-button" onclick="window.location.href='signup.html'">Start Free</button>
+      </div>
+
+      <!-- PRO -->
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <h3>Pro</h3>
+          <span class="section-tag">Most Popular</span>
+        </div>
+        <p>For creators and professionals.</p>
+        <div class="pricing-price">
+          <h1 class="price-value" data-monthly="$12" data-yearly="$115">$12</h1>
+          <span class="price-period">/mo</span>
+        </div>
+        <ul class="pricing-feature-list">
+          <li>✅ Unlimited images</li>
+          <li>✅ Up to 4K output</li>
+          <li>✅ No watermark</li>
+          <li>✅ PNG download</li>
+          <li>✅ Batch processing</li>
+          <li>✅ Background replace</li>
+          <li>❌ API access</li>
+        </ul>
+        <button class="lg-button full-width center-button" onclick="window.location.href='signup.html'">Get Pro</button>
+      </div>
+
+      <!-- BUSINESS -->
+      <div class="pricing-card">
+        <h3>Business</h3>
+        <p>For teams and high-volume use.</p>
+        <div class="pricing-price">
+          <h1 class="price-value" data-monthly="$39" data-yearly="$374">$39</h1>
+          <span class="price-period">/mo</span>
+        </div>
+        <ul class="pricing-feature-list">
+          <li>✅ Everything in Pro</li>
+          <li>✅ Full API access</li>
+          <li>✅ 10 team seats</li>
+          <li>✅ Priority support</li>
+          <li>✅ SLA guarantee</li>
+          <li>✅ Custom integrations</li>
+          <li>✅ Analytics dashboard</li>
+        </ul>
+        <button class="border-button full-width center-button" onclick="window.location.href='contact.html'">Contact Sales</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ TABLE -->
+  <section class="page">
+    <div class="section-header">
+      <span class="section-tag">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="table-container">
+      <table class="faq-table">
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Is the free plan really free?</td>
+            <td>Yes, forever. No credit card needed.</td>
+          </tr>
+          <tr>
+            <td>Can I cancel my subscription anytime?</td>
+            <td>Yes, cancel anytime with no penalty.</td>
+          </tr>
+          <tr>
+            <td>Do you store my images?</td>
+            <td>Images are auto-deleted after 1 hour.</td>
+          </tr>
+          <tr>
+            <td>What file types are supported?</td>
+            <td>JPG, PNG, WebP, HEIC and more.</td>
+          </tr>
+          <tr>
+            <td>Is there a free trial for Pro?</td>
+            <td>Yes, 7-day free trial on Pro plan.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>✂️ BgSnip</h1>
+        <p>AI-powered background removal for everyone.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <a href="services.html">Services</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+      </div>
+    </div>
+    <p>© 2025 BgSnip. All rights reserved.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

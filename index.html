@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BgSnip — AI Background Remover</title>
+  <link rel="stylesheet" href="cssFile/globalStyles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">✂️ BgSnip</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/services.html">Services</a></li>
+      <li><a href="pages/pricing.html">Pricing</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+      <li><a href="pages/login.html">Login</a></li>
+      <li><button onclick="window.location.href='pages/signup.html'">Get Started</button></li>
+      <li><button id="theme-toggle" class="border-button">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-badge">✨ Powered by AI</div>
+    <h1>Remove Backgrounds<br /><span class="highlight">Instantly & Freely</span></h1>
+    <p>Upload any image and our AI will cleanly remove the background in seconds.<br />No design skills needed. Professional results every time.</p>
+    <div class="hero-actions">
+      <button class="lg-button" onclick="window.location.href='pages/services.html'">✨ Try It Free</button>
+    </div>
+    <img class="hero-image" src="sources/hero-demo.png" alt="AI Background Removal Demo" onerror="this.style.display='none'" />
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="page">
+    <div class="section-header">
+      <span class="section-tag">Preview</span>
+      <h2>Before & After</h2>
+      <p>See the magic of AI background removal.</p>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>Before</h3>
+        <img class="before-after-img" src="sources/before.jpg" alt="Before Image" />
+      </div>
+
+      <div class="card">
+        <h3>After</h3>
+        <img class="before-after-img" src="sources/after.png" alt="After Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="page">
+    <div class="section-header">
+      <span class="section-tag">Why BgSnip</span>
+      <h2>Everything You Need</h2>
+      <p>Fast, accurate, and completely free to start.</p>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <img src="sources/icon-speed.png" alt="Speed" onerror="this.style.display='none'" />
+        <h3>Lightning Fast</h3>
+        <p>Background removed in under 3 seconds using our cutting-edge AI model.</p>
+      </div>
+      <div class="card">
+        <img src="sources/icon-quality.png" alt="Quality" onerror="this.style.display='none'" />
+        <h3>HD Quality</h3>
+        <p>Export up to 4K resolution with pixel-perfect edges and fine hair detail.</p>
+      </div>
+      <div class="card">
+        <img src="sources/icon-formats.png" alt="Formats" onerror="this.style.display='none'" />
+        <h3>All Formats</h3>
+        <p>Supports JPG, PNG, WebP, HEIC and more. Download as transparent PNG.</p>
+      </div>
+      <div class="card">
+        <img src="sources/icon-batch.png" alt="Batch" onerror="this.style.display='none'" />
+        <h3>Batch Processing</h3>
+        <p>Remove backgrounds from hundreds of images at once with our Pro plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="page how-section">
+    <div class="section-header">
+      <span class="section-tag">Steps</span>
+      <h2>How It Works</h2>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h3>① Upload</h3>
+        <p>Drag and drop your image or click to browse. Any format works.</p>
+      </div>
+      <div class="card">
+        <h3>② Process</h3>
+        <p>Our AI analyses and separates the subject from the background instantly.</p>
+      </div>
+      <div class="card">
+        <h3>③ Download</h3>
+        <p>Save your transparent PNG and use it anywhere — no watermarks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hero-section cta-section">
+    <h2>Ready to Try It?</h2>
+    <p>No account required for your first 3 images.</p>
+    <div class="hero-actions">
+      <button class="lg-button" onclick="window.location.href='pages/services.html'">✨ Start Now — It's Free</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>✂️ BgSnip</h1>
+        <p>AI-powered background removal for everyone.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <a href="pages/services.html">Services</a>
+        <a href="pages/pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/login.html">Login</a>
+        <a href="pages/signup.html">Signup</a>
+      </div>
+    </div>
+    <p>© 2025 BgSnip. All rights reserved.</p>
+  </footer>
+
+  <script src="jsFile/jsFunctions.js"></script>
+</body>
+</html>

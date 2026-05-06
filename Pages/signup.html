@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — BgSnip</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="../index.html">✂️ BgSnip</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><button id="theme-toggle" class="border-button">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <section class="page signup-page">
+
+    <div class="section-header">
+      <span class="section-tag">Get Started Free</span>
+      <h2>Create Your Account</h2>
+      <p>Join thousands removing backgrounds in seconds.</p>
+    </div>
+
+    <div class="form-container">
+      <div id="signup-alert"></div>
+
+      <form id="signup-form">
+        <div>
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="Jane Doe" required />
+        </div>
+
+        <div>
+          <label for="signup-email">Email Address</label>
+          <input type="email" id="signup-email" placeholder="you@example.com" required />
+        </div>
+
+        <div>
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="Min. 8 characters" required />
+        </div>
+
+        <div>
+          <label for="signup-confirm">Confirm Password</label>
+          <input type="password" id="signup-confirm" placeholder="Repeat password" required />
+        </div>
+
+        <div>
+          <button type="submit" class="lg-button full-width center-button">Create Account</button>
+        </div>
+
+        <div class="signup-footer-text">
+          <p>Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h1>✂️ BgSnip</h1>
+        <p>AI-powered background removal.</p>
+      </div>
+      <div>
+        <h2>Links</h2>
+        <a href="../index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <p>© 2025 BgSnip. All rights reserved.</p>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
