@@ -1027,15 +1027,14 @@ footer h2 {
 
   .contact-page {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 40px;
     align-items: flex-start;
     justify-content: center;
   }
 
   .contact-form-box {
-    flex: 1;
+    flex: 1 1 400px;
     max-width: 500px;
     min-width: 280px;
   }
@@ -1054,13 +1053,17 @@ footer h2 {
 
   .contact-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap:wrap ;
     gap: 20px;
-    flex: 1;
-    min-width: 260px;
-    max-width: 360px;
+    justify-content:center;
+    flex:1 1 400px;
   }
-
+  
+ .contact-info .card {
+  flex: 1 1 200px;
+  max-width: 260px;
+}
   .login-page {
     align-items: center;
     justify-content: center;
@@ -1682,4 +1685,5 @@ footer h2 {
   .stat-card {
       flex: 1 1 100%;
   }
+  
 }
