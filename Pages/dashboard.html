@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dashboard — BgSnip</title>
+
+  <link rel="stylesheet" href="../cssFile/globalStyles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <a href="../index.html">✂️ BgSnip</a>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+     <li><button onclick="window.location.href='pages/signup.html'">Get Started</button></li>
+      <li>
+        <button id="theme-toggle" class="border-button">🌙</button>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+
+    <span class="section-tag">📊 Stock Management</span>
+
+    <h1>Dashboard</h1>
+
+    <p>
+      Manage your inventory, track stock levels, and view analytics.
+    </p>
+
+  </section>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar">
+
+      <div class="sidebar-profile">
+
+        <div class="avatar-circle">👤</div>
+
+        <div class="profile-info">
+          <h4>My Account</h4>
+          <span class="section-tag">Pro Plan</span>
+        </div>
+
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a href="#overview" class="sidebar-link active-link">
+          🏠 Overview
+        </a>
+
+        <a href="#stock-section" class="sidebar-link">
+          📦 View Stock
+        </a>
+
+        <a href="#insert-section" class="sidebar-link">
+          ➕ Add Stock
+        </a>
+
+        <a href="#update-section" class="sidebar-link">
+          ✏️ Update Stock
+        </a>
+
+        <a href="#delete-section" class="sidebar-link">
+          🗑️ Delete Stock
+        </a>
+
+        <a href="#analytics-section" class="sidebar-link">
+          📊 Analytics
+        </a>
+
+        <a href="pricing.html" class="sidebar-link">
+          💳 Billing
+        </a>
+
+        <a href="contact.html" class="sidebar-link">
+          💬 Support
+        </a>
+
+      </nav>
+
+      <button class="sidebar-logout">
+        🚪 Logout
+      </button>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="dash-section">
+
+  <div class="section-header">
+    <span class="section-tag">Overview</span>
+    <h2>Stock Summary</h2>
+  </div>
+
+  <div class="stats-row">
+
+    <div class="stat-card reveal">
+      <div class="stat-icon">📦</div>
+      <div class="stat-info">
+        <h3>1,248</h3>
+        <p>Total Items In Stock</p>
+      </div>
+    </div>
+
+    <div class="stat-card reveal">
+      <div class="stat-icon">⚠️</div>
+      <div class="stat-info">
+        <h3>198</h3>
+        <p>Low Stock</p>
+      </div>
+    </div>
+
+    <div class="stat-card reveal">
+      <div class="stat-icon">❌</div>
+      <div class="stat-info">
+        <h3>70</h3>
+        <p>Out Of Stock</p>
+      </div>
+    </div>
+
+    <div class="stat-card reveal">
+      <div class="stat-icon">🖼️</div>
+      <div class="stat-info">
+        <h3>3,540</h3>
+        <p>Images Processed</p>
+      </div>
+    </div>
+
+    <div class="stat-card reveal">
+      <div class="stat-icon">💰</div>
+      <div class="stat-info">
+        <h3>$1,200</h3>
+        <p>Revenue</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+      <!-- QUICK ACTIONS -->
+      <section class="dash-section">
+
+        <div class="section-header">
+          <span class="section-tag">Quick Actions</span>
+          <h2>Manage Your Stock</h2>
+        </div>
+
+        <div class="card-container" id="stock-section">
+
+          <!-- VIEW STOCK -->
+          <div class="card reveal">
+
+            <div class="action-icon">📋</div>
+
+            <h3>View All Stock</h3>
+
+            <p>
+              Browse the complete inventory with search,
+              filters and sorting.
+            </p>
+
+            <a href="#stock-table-section">
+              View Stock →
+            </a>
+
+          </div>
+
+          <!-- ADD STOCK -->
+          <div class="card reveal" id="insert-section">
+
+            <div class="action-icon">➕</div>
+
+            <h3>Add New Stock</h3>
+
+            <p>
+              Add new products or services into
+              the inventory database.
+            </p>
+
+            <a href="#">
+              Add Item →
+            </a>
+
+          </div>
+
+          <!-- UPDATE -->
+          <div class="card reveal" id="update-section">
+
+            <div class="action-icon">✏️</div>
+
+            <h3>Update Stock</h3>
+
+            <p>
+              Update stock quantity, prices or
+              product information easily.
+            </p>
+
+            <a href="#">
+              Update Item →
+            </a>
+
+          </div>
+
+          <!-- DELETE -->
+          <div class="card reveal" id="delete-section">
+
+            <div class="action-icon">🗑️</div>
+
+            <h3>Delete Stock</h3>
+
+            <p>
+              Permanently remove unwanted
+              inventory records from database.
+            </p>
+
+            <a href="#">
+              Delete Item →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- STOCK TABLE -->
+      <section class="dash-section" id="stock-table-section">
+
+        <div class="section-header">
+          <span class="section-tag">Records</span>
+          <h2>Stock Overview</h2>
+        </div>
+
+        <!-- TOOLBAR -->
+        <div class="table-toolbar">
+
+          <input
+            type="text"
+            class="search-input"
+            placeholder="🔍 Search stock..."
+          />
+
+          <select class="filter-select">
+
+            <option>All Status</option>
+            <option>In Stock</option>
+            <option>Low Stock</option>
+            <option>Out Of Stock</option>
+
+          </select>
+
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-container">
+
+          <table id="stock-table">
+
+            <thead>
+
+              <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr>
+
+                <td>#001</td>
+                <td>Background Pack A</td>
+                <td>Digital</td>
+                <td>500</td>
+                <td>$9.99</td>
+
+                <td>
+                  <span class="badge badge-success">
+                    In Stock
+                  </span>
+                </td>
+
+                <td>
+                  <button class="tiny-button">Edit</button>
+                  <button class="tiny-button border-button">
+                    Delete
+                  </button>
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td>#002</td>
+                <td>Pro License Pack</td>
+                <td>Software</td>
+                <td>12</td>
+                <td>$49.99</td>
+
+                <td>
+                  <span class="badge badge-warning">
+                    Low Stock
+                  </span>
+                </td>
+
+                <td>
+                  <button class="tiny-button">Edit</button>
+                  <button class="tiny-button border-button">
+                    Delete
+                  </button>
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td>#003</td>
+                <td>API Credits Bundle</td>
+                <td>Service</td>
+                <td>0</td>
+                <td>$19.99</td>
+
+                <td>
+                  <span class="badge badge-error">
+                    Out Of Stock
+                  </span>
+                </td>
+
+                <td>
+                  <button class="tiny-button">Edit</button>
+                  <button class="tiny-button border-button">
+                    Delete
+                  </button>
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+      <!-- ANALYTICS -->
+      <section id="analytics-section" class="dash-section">
+
+        <div class="section-header">
+          <span class="section-tag">Analytics</span>
+          <h2>Graphical Stock View</h2>
+        </div>
+
+        <!-- SMALLER CHARTS -->
+        <div class="charts-row">
+
+          <!-- BAR CHART -->
+          <div class="chart-card reveal">
+
+            <h3>📊 Stock By Category</h3>
+
+            <canvas id="barChart"></canvas>
+
+          </div>
+
+          <!-- DONUT -->
+          <div class="chart-card reveal">
+
+            <h3>🍩 Stock Status</h3>
+
+            <canvas id="donutChart"></canvas>
+
+          </div>
+
+        </div>
+
+        <!-- LINE CHART -->
+        <div class="chart-card reveal ">
+
+          <h3>📈 Monthly Stock Trend</h3>
+
+          <canvas id="lineChart"></canvas>
+
+        </div>
+
+      </section>
+
+      <!-- RECENT ACTIVITY -->
+      <section class="dash-section">
+
+        <div class="section-header">
+          <span class="section-tag">History</span>
+          <h2>Recent Activity</h2>
+        </div>
+
+        <div class="activity-list">
+
+          <div class="activity-item reveal">
+
+            <span class="activity-dot dot-green"></span>
+
+            <div class="activity-info">
+
+              <p>
+                New stock inserted —
+                <strong>Background Pack B</strong>
+              </p>
+
+              <span class="activity-time">
+                Today, 10:32 AM
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="activity-item reveal">
+
+            <span class="activity-dot dot-yellow"></span>
+
+            <div class="activity-info">
+
+              <p>
+                Stock updated —
+                <strong>Pro License Pack</strong>
+              </p>
+
+              <span class="activity-time">
+                Today, 09:15 AM
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="activity-item reveal">
+
+            <span class="activity-dot dot-red"></span>
+
+            <div class="activity-info">
+
+              <p>
+                Stock deleted —
+                <strong>Legacy Pack v1</strong>
+              </p>
+
+              <span class="activity-time">
+                Yesterday, 04:50 PM
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+        <h1>✂️ BgSnip</h1>
+        <p>AI-powered background removal for everyone.</p>
+      </div>
+
+      <div>
+        <h2>Product</h2>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+
+      <div>
+        <h2>Company</h2>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+      </div>
+
+    </div>
+
+    <p>© 2025 BgSnip. All rights reserved.</p>
+
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+
+</body>
+
+</html>

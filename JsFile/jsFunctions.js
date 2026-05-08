@@ -264,6 +264,114 @@ function initScrollReveal() {
   elements.forEach(el => observer.observe(el));
 }
 
+// ── Charts ────────────────────────────────────────────────
+function initCharts() {
+  const yellow = '#F9E94E';
+  const gold   = '#D4A017';
+  const cream  = '#FDE68A';
+  const light  = '#FFF8C2';
+  const muted  = '#7A7A9D';
+
+  const barCtx = document.getElementById('barChart');
+  if (barCtx) {
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Digital', 'Software', 'Service', 'Hardware', 'Add-ons'],
+        datasets: [{
+          label: 'Stock Quantity',
+          data: [500, 352, 208, 94, 94],
+          backgroundColor: [yellow, gold, cream, light, muted],
+          borderRadius: 6,
+          borderSkipped: false
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
+  const donutCtx = document.getElementById('donutChart');
+  if (donutCtx) {
+    new Chart(donutCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['In Stock', 'Low Stock', 'Out of Stock'],
+        datasets: [{
+          data: [980, 198, 70],
+          backgroundColor: [yellow, gold, '#ef4444'],
+          borderWidth: 2,
+          borderColor: '#fff'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '65%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { padding: 12, font: { size: 12 } }
+          }
+        }
+      }
+    });
+  }
+
+  const lineCtx = document.getElementById('lineChart');
+  if (lineCtx) {
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        datasets: [
+          {
+            label: 'Stock Added',
+            data: [120,180,90,210,160,240,200,310,270,190,350,290],
+            borderColor: yellow,
+            backgroundColor: 'rgba(249,233,78,0.15)',
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: gold,
+            pointRadius: 4
+          },
+          {
+            label: 'Stock Removed',
+            data: [60,90,45,130,80,150,110,180,140,100,200,160],
+            borderColor: muted,
+            backgroundColor: 'rgba(122,122,157,0.08)',
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: muted,
+            pointRadius: 4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { padding: 12, font: { size: 12 } }
+          }
+        },
+        scales: {
+          y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+}
+
 // ── Init ──────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -271,6 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTool();
   initPricingTabs();
   initScrollReveal();
+  initCharts();
 
   document.getElementById('theme-toggle')
     ?.addEventListener('click', toggleTheme);
